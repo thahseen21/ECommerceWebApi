@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jwR7yOWVuxnZ+aXH3C+7JSM52R5AIxT/Kw6oz5PWIeYCXWv35ynNOvtEL3rKhumLwPE6sHuZRPBoK5tq9JsbGw==",
+  "dgSpecHash": "4D9G8nLf8CvYy2IeUJ71j3ZfSqT5X2HFq3UikrGr9OHV/vtRXa0G0TbzYDE+gEswP+MbB1QnVgbqZfMeZFCdgA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\thahseenn\\Documents\\Projects\\ECommerce\\Server\\BusinessLayer\\BusinessLayer.csproj",
+  "projectFilePath": "C:\\Users\\thahseenn\\Documents\\Projects\\ECommerce\\server\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

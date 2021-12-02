@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Nzm+kcAFXgieFfqWhAFelxTvH7B98Oi6i0IWDGURTWVd4+KAC7NCCMYmcgX4PUGDRcAjNBjV028jCmJW6oHXtg==",
+  "dgSpecHash": "38YKKyYYhydOPwNPyvPxNOqnVHI3IJb4WVB5z5IY49d8nFxhLJbhMvvMHYC1mRDSQI8/WzTN+fNpPvBAh92s5Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\thahseenn\\Documents\\Projects\\ECommerce\\Server\\DataLayer\\DataLayer.csproj",
+  "projectFilePath": "C:\\Users\\thahseenn\\Documents\\Projects\\ECommerce\\server\\DataLayer\\DataLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\thahseenn\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\thahseenn\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
