@@ -25,21 +25,14 @@ namespace DataLayer.Data
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductHistory> ProductHistories { get; set; }
         public virtual DbSet<ProductImage> ProductImages { get; set; }
-        public virtual DbSet<Role> Roles { get; set; }
-        public virtual DbSet<RoleClaim> RoleClaims { get; set; }
-        public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<UserClaim> UserClaims { get; set; }
-        public virtual DbSet<UserLogin> UserLogins { get; set; }
-        public virtual DbSet<UserRole> UserRoles { get; set; }
-        public virtual DbSet<UserToken> UserTokens { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=Trainee-02;Database=Shopping;User Id=SA;Password=MyPassword123");
-            }
+//             if (!optionsBuilder.IsConfigured)
+//             {
+// #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+//                 optionsBuilder.UseSqlServer("Server=Trainee-02;Database=Shopping;User Id=SA;Password=MyPassword123");
+//             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -98,63 +91,6 @@ namespace DataLayer.Data
                     .HasForeignKey(d => d.ProductId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__ProductIm__Produ__3C69FB99");
-            });
-
-            modelBuilder.Entity<RoleClaim>(entity =>
-            {
-                entity.HasOne(d => d.Role)
-                    .WithMany(p => p.RoleClaims)
-                    .HasForeignKey(d => d.RoleId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__RoleClaim__RoleI__29572725");
-            });
-
-            modelBuilder.Entity<User>(entity =>
-            {
-                entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
-            });
-
-            modelBuilder.Entity<UserClaim>(entity =>
-            {
-                entity.Property(e => e.Id).ValueGeneratedOnAdd();
-
-                entity.HasOne(d => d.User)
-                    .WithMany()
-                    .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__UserClaim__UserI__300424B4");
-            });
-
-            modelBuilder.Entity<UserLogin>(entity =>
-            {
-                entity.HasOne(d => d.User)
-                    .WithMany()
-                    .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__UserLogin__UserI__31EC6D26");
-            });
-
-            modelBuilder.Entity<UserRole>(entity =>
-            {
-                entity.HasOne(d => d.Role)
-                    .WithMany()
-                    .HasForeignKey(d => d.RoleId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__UserRole__RoleId__2C3393D0");
-
-                entity.HasOne(d => d.User)
-                    .WithMany()
-                    .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__UserRole__UserId__2B3F6F97");
-            });
-
-            modelBuilder.Entity<UserToken>(entity =>
-            {
-                entity.HasOne(d => d.User)
-                    .WithMany()
-                    .HasForeignKey(d => d.UserId)
-                    .HasConstraintName("FK__UserToken__UserI__30F848ED");
             });
 
             OnModelCreatingPartial(modelBuilder);
