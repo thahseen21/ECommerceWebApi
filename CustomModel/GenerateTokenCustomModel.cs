@@ -1,8 +1,8 @@
 using System;
 
-namespace PresentationLayer.ViewModel
+namespace CustomModel
 {
-    public class GenerateTokenViewModel
+    public class GenerateTokenCustomModel
     {
         public Guid UserId { get; set; }
 

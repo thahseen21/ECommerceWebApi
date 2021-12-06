@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace PresentationLayer.ViewModel
+namespace CustomModel
 {
-    public class LoginViewModel
+    public class LoginCustomModel
     {
         [Required]
         public string UserName { get; set; }

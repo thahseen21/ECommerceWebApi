@@ -27,6 +27,8 @@
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
     <ProjectReference Include="..\Identity\Identity.csproj" />
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj" />
+    <ProjectReference Include="..\CustomModel\CustomModel.csproj" />
   </ItemGroup>
 
 </Project>

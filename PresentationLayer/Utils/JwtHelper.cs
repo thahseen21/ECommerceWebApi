@@ -5,7 +5,7 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using PresentationLayer.ViewModel;
+using CustomModel;
 
 namespace PresentationLayer.Utils
 {
@@ -47,7 +47,7 @@ namespace PresentationLayer.Utils
         }
 
         // The token is generated here using the above private methods.
-        public string GenerateToken(GenerateTokenViewModel user)
+        public string GenerateToken(GenerateTokenCustomModel user)
         {
             List<Claim> claims = new List<Claim>
             {

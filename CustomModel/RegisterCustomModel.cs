@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace PresentationLayer.ViewModel
+namespace CustomModel
 {
-    public class RegisterViewModel
+    public class RegisterCustomModel
     {
         [Required]
         public string FirstName { get; set; }

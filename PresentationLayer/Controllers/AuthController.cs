@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using PresentationLayer.Utils;
-using PresentationLayer.ViewModel;
+using CustomModel;
 
 namespace PresentationLayer.Controllers
 {
@@ -36,7 +36,7 @@ namespace PresentationLayer.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> CreateUser(RegisterViewModel model)
+        public async Task<IActionResult> CreateUser(RegisterCustomModel model)
         {
             try
             {
@@ -87,7 +87,7 @@ namespace PresentationLayer.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login(LoginViewModel model)
+        public async Task<IActionResult> Login(LoginCustomModel model)
         {
             try
             {
@@ -100,8 +100,8 @@ namespace PresentationLayer.Controllers
                         return StatusCode(401, "Invalid email or password");
                     }
 
-                    var tokenModel = new GenerateTokenViewModel();
-                    tokenModel = user.Adapt<GenerateTokenViewModel>();
+                    var tokenModel = new GenerateTokenCustomModel();
+                    tokenModel = user.Adapt<GenerateTokenCustomModel>();
 
                     var result = await _signInManager
                         .PasswordSignInAsync(user,
@@ -113,7 +113,7 @@ namespace PresentationLayer.Controllers
                         var roleList = await this._userManager.GetRolesAsync(user);
 
                         tokenModel.RoleName = roleList[0];
-                        
+
                         var token = this._jwtHelper.GenerateToken(tokenModel);
                         return Ok(token);
                     }

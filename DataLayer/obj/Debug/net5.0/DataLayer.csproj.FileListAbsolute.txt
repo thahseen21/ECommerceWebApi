@@ -4,7 +4,6 @@ C:\Users\thahseenn\Documents\Projects\ECommerce\server\DataLayer\bin\Debug\net5.
 C:\Users\thahseenn\Documents\Projects\ECommerce\server\DataLayer\bin\Debug\net5.0\DataLayer.dll
 C:\Users\thahseenn\Documents\Projects\ECommerce\server\DataLayer\bin\Debug\net5.0\ref\DataLayer.dll
 C:\Users\thahseenn\Documents\Projects\ECommerce\server\DataLayer\bin\Debug\net5.0\DataLayer.pdb
-C:\Users\thahseenn\Documents\Projects\ECommerce\server\DataLayer\obj\Debug\net5.0\DataLayer.csproj.AssemblyReference.cache
 C:\Users\thahseenn\Documents\Projects\ECommerce\server\DataLayer\obj\Debug\net5.0\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\thahseenn\Documents\Projects\ECommerce\server\DataLayer\obj\Debug\net5.0\DataLayer.AssemblyInfoInputs.cache
 C:\Users\thahseenn\Documents\Projects\ECommerce\server\DataLayer\obj\Debug\net5.0\DataLayer.AssemblyInfo.cs
@@ -13,3 +12,7 @@ C:\Users\thahseenn\Documents\Projects\ECommerce\server\DataLayer\obj\Debug\net5.
 C:\Users\thahseenn\Documents\Projects\ECommerce\server\DataLayer\obj\Debug\net5.0\ref\DataLayer.dll
 C:\Users\thahseenn\Documents\Projects\ECommerce\server\DataLayer\obj\Debug\net5.0\DataLayer.pdb
 C:\Users\thahseenn\Documents\Projects\ECommerce\server\DataLayer\obj\Debug\net5.0\DataLayer.genruntimeconfig.cache
+C:\Users\thahseenn\Documents\Projects\ECommerce\server\DataLayer\obj\Debug\net5.0\DataLayer.csproj.AssemblyReference.cache
+C:\Users\thahseenn\Documents\Projects\ECommerce\server\DataLayer\bin\Debug\net5.0\CustomModel.dll
+C:\Users\thahseenn\Documents\Projects\ECommerce\server\DataLayer\bin\Debug\net5.0\CustomModel.pdb
+C:\Users\thahseenn\Documents\Projects\ECommerce\server\DataLayer\obj\Debug\net5.0\DataLayer.csproj.CopyComplete

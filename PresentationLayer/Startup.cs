@@ -1,4 +1,8 @@
 using System.Text;
+using BusinessLayer.IServices;
+using BusinessLayer.Services;
+using DataLayer.Core.Configuration;
+using DataLayer.Data;
 using Identity;
 using Identity.IdentityModels;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -10,8 +14,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using PresentationLayer.Utils;
-
 namespace PresentationLayer
 {
     public class Startup
@@ -34,6 +36,12 @@ namespace PresentationLayer
             });
 
             services.AddDbContext<ApplicationIdentityContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DbConnection")));
+
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DbConnection")));
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            services.AddScoped<IService, Service>();
 
             services.AddSingleton<IConfiguration>(Configuration);
 
