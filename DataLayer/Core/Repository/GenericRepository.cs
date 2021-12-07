@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DataLayer.Core.IRepository;
@@ -28,6 +29,11 @@ namespace DataLayer.Core.Repository
         public Task<bool> Delete(T entity)
         {
             throw new System.NotImplementedException();
+        }
+
+        public async Task<List<T>> FetchAll()
+        {
+            return await dbSet.ToListAsync();
         }
 
         public bool Upsert(T entity)

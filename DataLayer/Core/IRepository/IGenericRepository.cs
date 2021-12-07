@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace DataLayer.Core.IRepository
@@ -9,5 +10,7 @@ namespace DataLayer.Core.IRepository
         bool Upsert(T entity);
 
         Task<bool> Delete(T entity);
+
+        Task<List<T>> FetchAll();
     }
 }

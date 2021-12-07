@@ -4,6 +4,7 @@ using DataLayer.Core.Configuration;
 using DataLayer.Model;
 using Mapster;
 using CustomModel;
+using System.Collections.Generic;
 
 namespace BusinessLayer.Services
 {
@@ -84,6 +85,15 @@ namespace BusinessLayer.Services
         {
             await this._uow.ProductImage.ImageUpload(model);
             return true;
+        }
+
+        public async Task<List<Category>> FetchCategory()
+        {
+            return await this._uow.Category.FetchAll();
+        }
+        public List<Product> FetchProduct(int id)
+        {
+            return this._uow.Product.FetchProductById(id);
         }
     }
 }

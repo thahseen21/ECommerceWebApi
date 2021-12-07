@@ -17,6 +17,36 @@ namespace PresentationLayer.Controllers
             this._service = service;
         }
 
+        [HttpGet("fetchcategory")]
+        public async Task<IActionResult> FetchCategory()
+        {
+            try
+            {
+                var result = await this._service.AdminService.FetchCategory();
+                return Ok(result);
+            }
+            catch (System.Exception)
+            {
+                return BadRequest();
+            }
+
+        }
+
+        [HttpGet("fetchProduct")]
+        public IActionResult FetchProduct(int id)
+        {
+            try
+            {
+                var result = this._service.AdminService.FetchProduct(id);
+                return Ok(result);
+            }
+            catch (System.Exception)
+            {
+                return BadRequest();
+                throw;
+            }
+        }
+
         [HttpPost("addCategory")]
         public async Task<IActionResult> AddCategory(CategoryCustomModel model)
         {

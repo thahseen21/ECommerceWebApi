@@ -61,7 +61,7 @@ namespace PresentationLayer.Controllers
                         var isUserCreated = await _userManager.CreateAsync(entity, model.Password);
                         if (isUserCreated.Succeeded)
                         {
-                            var role = await _roleManager.FindByNameAsync("Customer");
+                            var role = await _roleManager.FindByNameAsync("Admin");
 
                             var roleResult = await _userManager.AddToRoleAsync(entity, role.Name);
 
@@ -114,7 +114,12 @@ namespace PresentationLayer.Controllers
 
                         tokenModel.RoleName = roleList[0];
 
-                        var token = this._jwtHelper.GenerateToken(tokenModel);
+                        // var token = this._jwtHelper.GenerateToken(tokenModel);
+
+                        var token = new TokenCustomModel();
+
+                        token.Token = this._jwtHelper.GenerateToken(tokenModel);
+
                         return Ok(token);
                     }
                 }

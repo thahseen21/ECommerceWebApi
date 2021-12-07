@@ -4,7 +4,7 @@ namespace CustomModel
 {
     public class GenerateTokenCustomModel
     {
-        public Guid UserId { get; set; }
+        public Guid Id { get; set; }
 
         public string UserName { get; set; }
 
